@@ -12,15 +12,14 @@ const styles = {
     backgroundColor: '#edf2f2',
     fontSize:'100%',
     fontWeight:'bold',
-    display:'inline-block',
-    margin:'5px 0 5px 0',
-    verticalAlign: 'middle',
+    margin:'auto',
     cursor:'pointer',
     textAlign: 'center'
   },
   div: {
     padding: '20px',
-    margin: '0',
+    width:'80%',
+    margin: 'auto'
   }
 }
 

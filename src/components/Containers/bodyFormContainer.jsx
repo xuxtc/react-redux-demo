@@ -10,17 +10,23 @@ import Footer from '../UIs/footer'
 const styles = {
   base: {
     fontSize:'1rem',
-    display:'block',
     margin: 'auto',
-    width:'80%',
+    width:'60%',
     minWidth: '4em',
-    padding:'10px',
     color:'black',
-    verticalAlign: 'middle'
+  },
+  result:{
+    paddingLeft:'20em',
   },
   red: {
     fontSize:'1.5rem',
+    margin: 'auto',
+    width:'80%',
     color:'red'
+  },
+  text:{
+    margin: 'auto',
+    width:'80%'
   }
 }
 
@@ -33,7 +39,7 @@ class BodyFormContainer extends React.Component {
   }
 
   handleChange(payload) {
-    this.props.actions.submitName(payload)
+    this.props.actions.displayName(payload)
   }
 
   handleSubmit(e) {
@@ -47,26 +53,30 @@ class BodyFormContainer extends React.Component {
 
   render() {
     const { user, submitted } = this.props
+
     if(submitted) {
       return (
-        <div>
-          <div style={styles.base}>Welcome here,
-              <strong style={styles.red}> {user} !!!</strong>
+        <div style={styles.base}>
+          <div style={styles.result}>
+            Welcome here,
+            <strong style={styles.red}> {user}</strong>
+            !!!
           </div>
           <Footer onClick={this.handleClick} />
         </div>
       )
     }
+
     return(
-      <div>
-          <form onSubmit={this.handleSubmit}>
-            <UserName onChange ={this.handleChange} />
-            <SubmitButton />
-            <div style={styles.base} id="userInput">
+      <div style={styles.base}>
+        <form onSubmit={this.handleSubmit}>
+          <UserName onChange ={this.handleChange} />
+          <SubmitButton />
+            <div id="userInput">
               <div style={styles.red}>{user}</div>
-              <div> will come to visit you.</div>
+              <div style={styles.text}> will come to visit you.</div>
             </div>
-          </form>
+        </form>
       </div>
     )
   }
@@ -76,7 +86,7 @@ BodyFormContainer.propTypes = {
   user: React.PropTypes.string.isRequired,
   submitted: React.PropTypes.bool.isRequired,
   actions: React.PropTypes.shape({
-    submitName: React.PropTypes.func.isRequired,
+    displayName: React.PropTypes.func.isRequired,
     submitFormSuccess: React.PropTypes.func.isRequired
   }).isRequired
 }

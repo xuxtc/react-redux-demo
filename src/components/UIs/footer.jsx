@@ -3,13 +3,8 @@ import React from 'react'
 const styles = {
   base: {
     fontSize:'1rem',
-    display:'block',
-    margin: 'auto',
-    width:'80%',
-    minWidth: '4em',
-    padding:'10px',
+    width:'60%',
     color:'darkGray',
-    verticalAlign: 'middle',
     float:'right'
   }
 }
@@ -26,8 +21,8 @@ export default class Footer extends React.Component {
 
   render(){
     return(
-      <div>
-        <footer style={styles.base}>
+      <div style={styles.base}>
+        <footer>
           <a onClick={this.handleClick}>click footer to back</a>
         </footer>
       </div>

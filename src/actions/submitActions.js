@@ -1,5 +1,5 @@
 export const SUBMIT_FORM_SUCCESSFUL = 'SUBMIT_FORM_SUCCESSFUL'
-export const SUBMIT_NAME = 'SUBMIT_NAME'
+export const DISPLAY_NAME = 'DISPLAY_NAME'
 
 
 export const submitFormSuccess = (payload) => {
@@ -9,9 +9,9 @@ export const submitFormSuccess = (payload) => {
   }
 }
 
-export const submitName = (payload) => {
+export const displayName = (payload) => {
   return {
-    type: SUBMIT_NAME,
+    type: DISPLAY_NAME,
     payload,
   }
 }
