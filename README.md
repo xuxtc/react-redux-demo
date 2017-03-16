@@ -1,2 +1,6 @@
 # react-redux-demo
-building...
+a simple demo
+
+
+## Run the app
+`npm run start`
