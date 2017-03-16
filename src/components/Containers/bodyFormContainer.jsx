@@ -18,15 +18,12 @@ const styles = {
   result:{
     paddingLeft:'20em',
   },
+  msg:{
+    paddingLeft:'5em',
+  },
   red: {
     fontSize:'1.5rem',
-    margin: 'auto',
-    width:'80%',
     color:'red'
-  },
-  text:{
-    margin: 'auto',
-    width:'80%'
   }
 }
 
@@ -73,8 +70,9 @@ class BodyFormContainer extends React.Component {
           <UserName onChange ={this.handleChange} />
           <SubmitButton />
             <div id="userInput">
-              <div style={styles.red}>{user}</div>
-              <div style={styles.text}> will come to visit you.</div>
+              <div style={styles.msg}>
+              <strong style={styles.red}>{user} </strong>
+              will come to visit you.</div>
             </div>
         </form>
       </div>
