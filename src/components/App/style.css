@@ -1,0 +1,10 @@
+.title {
+  color: violet;
+},
+
+.btn{
+	color: red;
+	margin: 0 20px;
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+}
