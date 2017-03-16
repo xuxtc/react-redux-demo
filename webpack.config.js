@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
-  entry: path.join(__dirname, 'src/index.jsx'),
+  entry: path.join(__dirname, 'src/provider.jsx'),
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -21,9 +21,10 @@ const config = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loaders: [
-          'babel-loader'
-        ]
+        loaders: 'babel-loader',
+        query: {
+          presets: ["es2015", "stage-0", "react"]
+        }
       }
     ],
   },
