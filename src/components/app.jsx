@@ -54,7 +54,7 @@ class App extends React.Component {
     if(submitted) {
       return (
         <div style={styles.base}>
-          <div style={styles.result}>
+          <div id="welcome" style={styles.result}>
             Welcome here,
             <strong style={styles.red}> {user}</strong>
             !!!

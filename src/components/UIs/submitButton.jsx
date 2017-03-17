@@ -23,12 +23,12 @@ const styles = {
   }
 }
 
-const SubmitButton = ()=> {
-  return (
-    <div style={styles.div}>
-      <button style={styles.button} id="submit">Submit</button>
-    </div>
-  )
+export default class SubmitButton extends React.Component {
+  render(){
+    return (
+      <div style={styles.div}>
+        <button style={styles.button} id="submit">Submit</button>
+      </div>
+    )
+  }
 }
-
-export default SubmitButton
