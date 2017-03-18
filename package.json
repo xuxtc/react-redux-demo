@@ -41,6 +41,7 @@
     "collectCoverageFrom" : [
       "**/*.{js,jsx}",
       "!**/coverage/**",
+      "!**/dist/**",
       "!**/store.js",
       "!**/provider.jsx",
       "!**/index.js",
